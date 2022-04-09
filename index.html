@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </br>
+      <h3></h3>
+    </header>
+    <!-- timeblocks start here -->
+    <div class="container">
+      <div class="row time-of-day hour" id="9am">
+        <p class="col-2 display-text time-block">9AM</p>
+        <input class="col-8 timeBlockColor" id='09' type="text" data-id-1> 
+        <button class="col-2 saveBtn"><img src="./assets/images/save-icon.png"/></button>
+      </div>
+      <div class="row hour" id="10am">
+        <p class="col-2 time-block">10AM</p>
+        <input class="col-8 timeBlockColor" id='10' type="text" data-id-2> 
+        <button class="col-2 saveBtn"><img src="./assets/images/save-icon.png"/></button>
+      </div>
+      <div class="row hour" id="11am">
+        <p class="col-2 time-block">11AM</p>
+        <input class="col-8 timeBlockColor" id='11' type="text" data-id-3> 
+        <button class="col-2 saveBtn"><img src="./assets/images/save-icon.png"/></button>
+      </div>
+      <div class="row hour" id="12pm">
+        <p class="col-2 time-block">12PM</p>
+        <input class="col-8 timeBlockColor" id='12' type="text" data-id-4> 
+        <button class="col-2 saveBtn"><img src="./assets/images/save-icon.png"/></button>
+      </div>
+      <div class="row hour" id="1PM">
+        <p class="col-2 time-block">1PM</p>
+        <input class="col-8 timeBlockColor" id='13' type="text" data-id-5> 
+        <button class="col-2 saveBtn"><img src="./assets/images/save-icon.png"/></button>
+      </div>
+      <div class="row hour" id="2PM">
+        <p class="col-2 time-block">2PM</p>
+        <input class="col-8 timeBlockColor" id='14' type="text" data-id-6> 
+        <button class="col-2 saveBtn"><img src="./assets/images/save-icon.png"/></button>
+      </div>
+      <div class="row hour" id="3PM">
+        <p class="col-2 time-block">3PM</p>
+        <input class="col-8 timeBlockColor" id='15' type="text" data-id-7> 
+        <button class="col-2 saveBtn"><img src="./assets/images/save-icon.png"/></button>
+      </div>
+      <div class="row hour" id="4PM">
+        <p class="col-2 time-block">4PM</p>
+        <input class="col-8 timeBlockColor" id='16' type="text" data-id-8> 
+        <button class="col-2 saveBtn"><img src="./assets/images/save-icon.png"/></button>
+      </div>
+      <div class="row hour" id="5PM">
+        <p class="col-2 time-block">5PM</p>
+        <input class="col-8 timeBlockColor" id='17' type="text" data-id-9> 
+        <button class="col-2 saveBtn"><img src="./assets/images/save-icon.png"/></button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

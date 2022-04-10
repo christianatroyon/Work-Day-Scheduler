@@ -1,7 +1,7 @@
 //displays the current date on the header
 $('#currentDay').text(moment().format('MMMM Do YYYY'));
 
-//var time = document.querySelector('#hour');
+// will use this later for saving tasks
 saveBtns = document.querySelectorAll('.saveBtn')
 
 //renders color on text areas based on live time of day
@@ -31,3 +31,37 @@ var currentTimeColor = function () {
 }
 // check time!
 setInterval(currentTimeColor(), 60);
+
+
+// $('data-id-').click(function () {
+//     inputVal.push({
+//         new: 'event',
+//         inputText: ''
+//     })
+//     localStorage.setItem("events", JSON.stringify(events))
+// })
+//When save button is hit, it adds it to local storage
+for (let i = 0; i < saveBtns.length; ++i) {
+    saveBtns[i].addEventListener('click', function(event) {
+        var inputVal = saveBtns[i].previousElementSibling.value; 
+        console.log('input:', inputVal)
+        var newNum = i + 1;
+        localStorage.setItem('data-id-' + (newNum) , inputVal)
+        console.log(saveBtns)
+    })
+}
+//pulls the localstorage and displays on the screen
+grabData()
+
+function grabData() {
+    for (var i = 0; i < 10; ++i) {
+
+       var saveItem = localStorage.getItem('data-id-'+ i);
+
+       if (saveItem !== null) {
+        document.querySelector('input[data-id-' + i + ']').value = saveItem
+       }
+
+       console.log('dataVal:', localStorage.getItem('data-id-'+ i))
+    }
+}
